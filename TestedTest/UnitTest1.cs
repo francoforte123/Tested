@@ -8,6 +8,15 @@ namespace TestedTest
         MyQueue<string> myQueueString = new MyQueue<string>();
 
         [Fact]
+        public void TestTheTailEmptyInteger()
+        {
+            myQueueInteger.Queue(1);
+            myQueueInteger.Queue(2);
+            myQueueInteger.Queue(3);
+            Assert.Empty(myQueueInteger.array);
+        }
+
+        [Fact]
         public void QueueTestInteger()
         {
             myQueueInteger.Queue(1);
@@ -35,6 +44,15 @@ namespace TestedTest
 
 
 
+
+        [Fact]
+        public void TestTheTailEmptyString()
+        {
+            myQueueString.Queue("Leonardo");
+            myQueueString.Queue("Luigi");
+            myQueueString.Queue("Mario");
+            Assert.Empty(myQueueString.array);
+        }
 
         [Fact]
         public void QueueTestString()       
